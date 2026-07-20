@@ -1,7 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head><title>First Project</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning HTML - Day 2</title>
+
+  <meta property="og:title" content="Learning HTML - Day 2 Project">
+  <meta property="og:description" content="A practice page built while learning semantic HTML5, accessible forms, and ARIA basics.">
+</head>
 <body>
-  <h1>Hello World</h1>
+  <header>
+  <h1>Learning HTML</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#form">Contact</a>
+  </nav>
+</header>
+ <main>
+<article id="about">
+  <h2>What is BinX ?</h2>
+  <p> BinX is a training center for web developers.</p>
+  <p> BinX is a company of people who are passionate about <strong> technology</strong> and web development.</p>
+</article>
+ <aside>
+    <h2>Did You Know?</h2>
+    <span>
+     that binx proovides the best courses ever exists in the world?
+     and its also very affordable for everyone and 
+     i dont know what else to say but i just wanna make the paragraph longer  
+    </span>
+  </aside>\
+  <section id="form">
+    <h2>Contact Us</h2>
+    <button type="reset" aria-label="clear form" form="contact-form">&times;</button>
+    <form id="contact-form">
+      <label for="name">full name</label>
+      <input id="name" type="text" required>
+
+      <label for="email">email</label>
+      <input id="email" type="email" required>
+
+      <label for="phone">phone number</label>
+      <input id="phone" type="tel">
+      
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+
+        <label>
+          <input type="radio" name="contact" value="email">
+          Email
+        </label>
+
+        <label>
+          <input type="radio" name="contact" value="phone">
+          Phone
+        </label>
+      </fieldset>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+ </main>
+
+<footer>
+  <p>&copy; 2026 Learning HTML Project. Built by [abd eid]</p>
+</footer>
+
 </body>
 </html>
