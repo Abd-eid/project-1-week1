@@ -4,58 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learning HTML - Day 2</title>
+  <link rel="stylesheet" href="css/style.css">
 
   <meta property="og:title" content="Learning HTML - Day 2 Project">
   <meta property="og:description" content="A practice page built while learning semantic HTML5, accessible forms, and ARIA basics.">
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
     <h1>Learning HTML</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#form">Contact</a>
+    <nav class="main-nav">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#form" class="nav-link">Contact</a>
     </nav>
   </header>
 
   <main>
 
-    <article id="about">
-      <h2>What is BinX?</h2>
+    <article id="about" class="about-section">
+      <h2 class="section-title">What is BinX?</h2>
       <p>BinX is a training center for web developers.</p>
       <p>BinX is a company of people who are passionate about <strong>technology</strong> and <em>web development</em>.</p>
 
-      <figure>
-        <img src="images/IMG_8810.png" alt="BinX Tech logo, a stylized number seven" width="400" height="300">
-        <figcaption>The BinX Tech logo.</figcaption>
+      <figure class="logo-figure">
+        <img src="images/IMG_8810.png" alt="BinX Tech logo, a stylized number seven" width="400" height="300" class="logo-image">
+        <figcaption class="logo-caption">The BinX Tech logo.</figcaption>
       </figure>
 
-      <h3>What You'll Learn at BinX</h3>
-      <ul>
-        <li>Semantic HTML5</li>
-        <li>Responsive CSS3 (Flexbox & Grid)</li>
-        <li>Git & GitHub workflow</li>
-        <li>React and Next.js</li>
-      </ul>
+      <h3 class="subsection-title">What You'll Learn at BinX ?</h3>
+     <div class="card-container">
+      <div class="card">
+        <h4 class="card-title">Frontend</h4>
+        <p>Learn HTML, CSS, JavaScript and React.</p>
+      </div>
+      <div class="card">
+        <h4 class="card-title">Backend</h4>
+        <p>Learn Node.js, Express.js, and MongoDB.</p>
+      </div>
+      <div class="card">
+        <h4 class="card-title">Full Stack</h4>
+        <p>Learn both frontend and backend development.</p>
+      </div>
+     </div>
+
     </article>
 
-    <aside>
-      <h2>Did You Know?</h2>
+    <aside class="fun-fact">
+      <h2 class="section-title">Did You Know?</h2>
       <p>
         that binx proovides the best courses ever exists in the world?
         and its also very affordable for everyone and
         i dont know what else to say but i just wanna make the paragraph longer
       </p>
 
-      <blockquote>
+      <blockquote class="fun-fact-quote">
         "The best way to learn to code is to actually build things."
       </blockquote>
     </aside>
 
-    <section id="form">
-      <h2>Contact Us</h2>
-      <button type="reset" aria-label="clear form" form="contact-form">&times;</button>
-      <form id="contact-form">
+    <section id="form" class="contact-section">
+      <h2 class="section-title">Contact Us</h2>
+      <button type="reset" class="reset-btn" aria-label="clear form" form="contact-form">&times;</button>
+      <form id="contact-form" class="contact-form">
         <label for="name">Full Name</label>
         <input id="name" name="name" type="text" required>
 
@@ -65,28 +75,28 @@
         <label for="phone">Phone Number</label>
         <input id="phone" name="phone" type="tel">
 
-        <fieldset>
-          <legend>Preferred Contact Method</legend>
+        <fieldset class="contact-method">
+          <legend class="contact-method-title">Preferred Contact Method</legend>
 
-          <label>
+          <label class="radio-label">
             <input type="radio" name="contact" value="email">
             Email
           </label>
 
-          <label>
+          <label class="radio-label">
             <input type="radio" name="contact" value="phone">
             Phone
           </label>
         </fieldset>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </section>
 
   </main>
 
-  <footer>
-    <p>&copy; 2026 Learning HTML Project. Built by Abd Eid.</p>
+  <footer class="site-footer">
+    <p class="footer-text">&copy; 2026 Learning HTML Project. Built by Abd Eid.</p>
   </footer>
 
 </body>
