@@ -49,6 +49,7 @@ body {
 
 .card-container {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   padding: 20px;
   justify-content: space-between;
@@ -62,6 +63,8 @@ body {
 
 .card {
   background-color: white;
+  min-width: 250px;
+  max-width: 100%;
   padding: calc(var(--spacing-unit) * 2);
   border-radius: 8px;
   flex: 1;
@@ -69,10 +72,43 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
 .card-title {
   color: var(--color-primary);
   margin-bottom: calc(var(--spacing-unit) / 2);
+}
+
+.skills {
+  max-width: 1000px;
+  margin: 0 auto calc(var(--spacing-unit) * 2);
+  padding: calc(var(--spacing-unit) * 2);
+  background-color: white;
+  border-radius: 8px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.skill-card {
+  background-color: var(--color-bg);
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.skill-card h3 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-unit);
 }
 
 main {
@@ -211,4 +247,34 @@ input:focus {
 
 .footer-text {
   font-size: 14px;
+}
+
+/* Content Layout: Grid with named areas (mobile-first) */
+.content-layout {
+  display: grid;
+  grid-template-areas:
+    "content"
+    "sidebar";
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.content-layout .skills {
+  grid-area: content;
+  margin-bottom: 0;
+}
+
+.content-layout .fun-fact {
+  grid-area: sidebar;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    flex-direction: row;
+  }
+
+  .content-layout {
+    grid-template-areas: "content sidebar";
+    grid-template-columns: 2fr 1fr;
+  }
 }
